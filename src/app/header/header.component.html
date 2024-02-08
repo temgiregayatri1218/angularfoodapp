@@ -1,0 +1,23 @@
+<header>
+    <div class="container">
+        <a routerLink="/home" routerLinkActive="active" class="logo" (click)="changepage1()"><b>Testy Food time</b></a>
+        <h3 *ngIf="!checkuser" class="heading-h3"></h3>
+        <nav>
+            <ul>
+                <li >
+                    <a routerLink="/login" routerLinkActive="active" (click)="changepage()"
+                        *ngIf="checkuser">LogIn</a>
+                    <a *ngIf="!checkuser" (click)="logoutuser()">Log-out</a>
+                </li>
+                <!-- <li>
+                    <a routerLink="/adminlogin" routerLinkActive="active">Admin</a>
+                </li> -->
+                <li>
+                    <a routerLink="/cartitem" routerLinkActive="active" *ngIf="isUserLoggedIn">cart</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--     -->
+<!-- <app-home></app-home> -->

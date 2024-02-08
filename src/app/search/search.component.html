@@ -1,0 +1,4 @@
+<div>
+    <input type="text" placeholder="Search Food from TC from food Corner" [(ngModel)]="searchItem">
+    <button (click)="searchdata()"  routerLink="/search/{{searchItem}}" routerLinkActive="active"><a > Search </a></button>
+</div>

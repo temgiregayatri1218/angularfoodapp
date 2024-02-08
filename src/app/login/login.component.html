@@ -1,0 +1,16 @@
+
+<app-header></app-header>
+<div class="container">
+    <form #loginform="ngForm">
+        <label for="name" class="label1" >
+            Enter Your User Name :
+        </label>
+        <input type="text" placeholder="Username"  name="name" id="name" class="input" ngModel><br>
+        <label for="password" class="label1">
+            Enter Your Password :
+        </label>
+        <input type="password" placeholder="password" name="password" id="password" class="input" ngModel><br>
+        <button (click)="getvalue()" class="btn">Submit</button>
+        <p>If not loged in then signup <a routerLink="/signup" routerLinkActive="active" >Sign Up</a></p>
+    </form>
+</div>

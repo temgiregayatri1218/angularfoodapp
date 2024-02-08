@@ -1,0 +1,18 @@
+
+
+
+<nav class="navbar">
+    <h1 (click)="clickonadmin()">Admin Portal</h1>
+    <div class="search-cls">
+        <input type="text" placeholder="Search Product" [(ngModel)]="searchdata">
+        <button (click)="searchproduct()">Search</button>
+    </div>
+    <ul class="ullist">
+        <li >
+            <a routerLink="/addproduct">Add product</a>
+        </li>
+        <li ><button (click)="logoutadmin()">Log Out</button>
+        </li>
+    </ul>
+</nav>
+<hr>

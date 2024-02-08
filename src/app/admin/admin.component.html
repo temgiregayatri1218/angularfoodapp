@@ -1,0 +1,22 @@
+<app-adminheader (searcgedproduct)="searchproduct($event)"></app-adminheader>
+<table>
+    <tr>
+      <th>Sr.No.</th>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Available</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let product of productdata">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td><img src="{{product.imageUrl}}" alt="Food imae" height="200px" width="200px"></td>
+      <td>{{product.price}}</td>
+      <td><span *ngIf="product.available" (click)="updateavailabledata(product)" class="btn">&#9989;</span>
+          <span *ngIf="!product.available" (click)="updateavailabledata(product)" class="btn">&#10062;</span></td>
+      <td><Button (click)="onupdate(product.id)" class="btn"><a>Update</a></Button></td>
+      <td><Button (click)=" ondelete(product.id)" class="btn">Delete</Button></td>
+    </tr>
+  </table>

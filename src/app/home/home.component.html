@@ -1,0 +1,44 @@
+<!-- <app-search *ngIf="showpagedetail" ></app-search> -->
+
+<app-header (loginevent)="updateheader()" (changeheader)="onlogoutuser($event)"></app-header>
+
+
+<div class="searchdetails">
+    <input type="text" placeholder="Search Text" [(ngModel)]="searchvalue">
+    <button class="btn" (click)="onsearch()"> Search</button>
+</div>
+<app-tag *ngIf="showpagedetail"></app-tag>
+<ul>
+    <li *ngFor="let food of foods">
+        <div (click)="navigatetopage(food.id)">
+            <a>
+                <img [src]="food.imageUrl" [alt]="food.name" height="40px" width="40px">
+
+                <div class="data">
+                    <div> {{food.name}}
+
+                        <span class="favourite">&hearts;</span>
+                    </div>
+
+                    <div class="product-item-footer">
+                        <div class="origin">
+                            <!-- <span *ngFor="let origin of food.origin">
+                                {{food.origin}}
+                            </span> -->
+                        </div>
+                        <div class="cook-time">
+                            <span>🕐</span>
+                            {{food.cooktime}}
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        {{food.price|currency}}
+                    </div>
+                </div>
+
+            </a>
+        </div>
+    </li>
+</ul>
+<!-- <router-outlet></router-outlet> -->

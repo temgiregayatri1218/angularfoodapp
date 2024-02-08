@@ -1,0 +1,17 @@
+
+<app-header></app-header>
+<div class="container">
+    <form #signupform="ngForm">
+        <label for="name" class="labelc">Enter Your Name:</label>
+        <input type="text" placeholder="Enter Name:" name="name" id="name" ngModel><br>
+        <label for="username" class="labelc">Enter Your User Name :</label>
+        <input type="text" placeholder="UserName" name="username" id="username" ngModel><br>
+        <label for="mobile" class="labelc">Enter Your Mobile : </label>
+        <input type="number" placeholder="mobile" name="mobile" id="mobile" ngModel><br>
+        <label for="address" class="labelc">Enter Your address : </label>
+        <input type="text" placeholder="address" name="address" id="address" ngModel><br>
+        <label for="password" class="labelc">Enter Your password : </label>
+        <input type="password" placeholder="password" name="password" id="password" ngModel><br>
+        <button class="btn" (click)="onsubmit()">Submit</button>
+    </form>
+</div>

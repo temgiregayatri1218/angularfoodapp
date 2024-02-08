@@ -1,0 +1,90 @@
+.container{
+    display: flex;
+   
+    align-items: flex-start;
+    margin: 1.5rem;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    flex: 3 0;
+    border: 1px solid #ffbbbb;
+    border-radius: 1rem;
+    margin: .5rem;
+    padding: 0;
+    list-style-type: none;
+}
+ul li img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100rem;
+    object-fit: cover;
+}
+
+ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+ul li:last-child{
+    border: none;
+}
+ul li div{
+    padding: 2rem;
+}
+ul li select{
+    width: 4rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightcoral;
+}
+ul .remove-btn{
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    opacity: .8;
+    color: #e72929;
+}
+ul .remove-btn:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.checkout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 3;
+    height: 20rem;
+    border: 2px solid  #ffbbbb;
+    padding: .5rem;
+    margin: .5rem;
+}
+.checkout .food-count{
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+}
+.checkout .food-count::before{
+    content:'Total Product';
+    color:gray;
+}
+.checkout a{
+    padding: 1rem;
+    color: white;
+    background-color:#e72929;
+    display: block;
+    width: 70%;
+    border-radius: 1rem;
+    text-align: center;
+    opacity: .7;
+    justify-content: center;
+}
+.checkout a:hover{
+    opacity: 1;
+    cursor: pointer;
+}

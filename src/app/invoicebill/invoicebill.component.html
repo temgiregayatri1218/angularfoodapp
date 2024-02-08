@@ -1,0 +1,33 @@
+<div class="header-cls">
+    <h1>Payment</h1>
+</div>
+<hr>
+<div class="container">
+    <!-- <div *ngFor="let object of paymentdetailsproducts"> -->
+    <p>Name :{{username}}</p>
+    <p>Address :{{address}}</p>
+    <p>Invoice Id: {{number1}}</p>
+    <table class="tablecls">
+        <tr class="">
+            <th>Sr.no</th>
+            <th>Name Of product</th>
+            <th>Quantity Of product</th>
+            <th>Price</th>
+        </tr>
+        <tbody class="table-body">
+            <tr *ngFor="let object of paymentdetailsproducts[0].arrayofproduct" class="table-rw">
+                <td>{{no+1}}</td>
+                <td>{{object.nameoffood}}</td>
+                <td>{{object.price}}</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Total Price:</td>
+                <td>paymentdetailsproducts[0]totalpriceofproduct</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+<!-- </div> -->
+</div>

@@ -1,0 +1,21 @@
+<app-adminheader></app-adminheader>
+<div class="container">
+    <form #productdetails="ngForm">
+        <label for="name">Enter Name of product :</label>
+        <input type="text" placeholder="Enter name:" name="name" id="name" [(ngModel)]="pname"><br>
+        <label for="price">Enter Price Of product : </label>
+        <input type="number" placeholder="Enter Price :" name="price" id="price" [(ngModel)]="pprice"><br>
+        <label for="tags">Enter Tags :</label>
+        <input type="text" placeholder="Enter Tags" name="tag" id="tag" [(ngModel)]="ptags"><br>
+        <label for="Image">Enter imageUrl :</label>
+        <input type="text" placeholder="Enter ImageUrl:" name="image" id="image" [(ngModel)]="purl"><br>
+        <label for="cooktime">Enter Cook-Time:</label>
+        <input type="text" name="cooktime" id="cooktime" [(ngModel)]="pcooktime"><br>
+        <label for="origin">Enter Origin :</label>
+        <input type="text" name="origin" id="origin" [(ngModel)]="porigin"><br>
+        <button  *ngIf="checkbutton" (click)="onsubmit('submit')"> Submit</button>
+         <button *ngIf="!checkbutton" (click)="onsubmit('update')"> Update</button>                             
+        
+        <button>Reset</button>
+    </form>
+</div>
